@@ -1,0 +1,113 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+
+
+<head>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      .image {
+        background-image: url("https://images.unsplash.com/photo-1542074494-62e9e51a61b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+      }
+      .text {
+        color: #eeeeee;
+        font-weight: bold;
+        border: 3px solid #cccccc;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+<div class="">
+	<div class="container d-flex justify-content-center">
+		<div class="row">
+			<div class="card">
+				<div class="card-header">
+					<strong><h1>User Login</h1></strong>
+				</div>
+				<div class="card-body">
+					<form name="login" id="login">
+						<div class="row">
+							<div class="col">
+								<span class="profile-img">
+									<i class='fas fa-user-circle' style='font-size:120px'></i>
+								</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<hr> <!-- other content  -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">
+												<i class='fas fa-users'></i>
+											</span>
+										</div>
+										<input class="form-control" placeholder="Enter Username" id="username" name="username" type="text" autofocus [(ngModel)]="username">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">
+												<i class='fas fa-unlock-alt'></i>
+											</span>
+										</div>
+										<input class="form-control" placeholder="Enter Password" id="password" name="password" type="password" [(ngModel)]="password">
+									</div>
+								</div>
+								<div class="d-grid gap-2 col-6 mx-auto">
+									<!--<input type="button" class="btn btn-lg btn-success btn-block submit" id="login_m"  value="Sign in"  disabled>-->
+                  					<button class="btn btn-success" (click)=checkAdminLogin() class="btn btn-success">Login</button>
+								</div>
+							</div>
+						</div>
+					<!-- <a href="#" onClick="">I forgot my password!</a> -->
+					</form>
+					<hr class="bottom-form-separator">
+				</div>
+			</div>
+			<ul class="bottom-form-link smaller-links"> 
+				<li>
+					<a href="/privacy" target="_blank" data-analytics-event="clickedLogInPrivacyLink"><small>Privacy Policy</small></a>
+				</li> 
+				<li>
+					<a href="/legal" target="_blank" data-analytics-event="clickedLogInTOSLink"><small>Terms of Service</small></a>
+				</li> 
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
